@@ -5,10 +5,7 @@ const mysql = require("mysql");
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
  
- 
 app.use(cors());
- 
- 
  
 const db=mysql.createConnection({
     user: "root",
@@ -17,7 +14,7 @@ const db=mysql.createConnection({
     password: "",
     database: "kozutak",
 });
- 
+
 app.get("/", (req, res) =>{
     res.send("Express is running");
 })
@@ -28,4 +25,8 @@ app.get("/regiok", (req, res) =>{
         if (err) return res.json(err);
         return
     })
+})
+
+app.listen(3001,() =>{
+    console.log("Server is running on port 3001")
 })
