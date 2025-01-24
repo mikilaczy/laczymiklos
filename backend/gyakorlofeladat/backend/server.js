@@ -16,7 +16,7 @@ const db=mysql.createConnection({
 });
 
 app.get("/", (req, res) =>{
-    res.send("Express is running");
+    res.send("Fut a szerver");
 })
  
 app.get("/regiok", (req, res) =>{
